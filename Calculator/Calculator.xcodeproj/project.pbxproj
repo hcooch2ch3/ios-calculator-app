@@ -13,6 +13,7 @@
 		28613C6D258C9D3D0002862D /* CalculatorMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28613C6C258C9D3D0002862D /* CalculatorMode.swift */; };
 		28613C72258CA27A0002862D /* CalculatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28613C71258CA27A0002862D /* CalculatorError.swift */; };
 		28613C7A258CB2EA0002862D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28613C79258CB2EA0002862D /* UIViewControllerExtension.swift */; };
+		28613C8F258CC4480002862D /* CalculatorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28613C8E258CC4480002862D /* CalculatorLabel.swift */; };
 		366A9A79257E9EDA0092A21E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A9A78257E9EDA0092A21E /* Stack.swift */; };
 		366A9A7E257F63EF0092A21E /* BasicCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A9A7D257F63EF0092A21E /* BasicCalculable.swift */; };
 		366A9A81257F644D0092A21E /* DecimalCalculable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366A9A80257F644D0092A21E /* DecimalCalculable.swift */; };
@@ -47,6 +48,7 @@
 		28613C6C258C9D3D0002862D /* CalculatorMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMode.swift; sourceTree = "<group>"; };
 		28613C71258CA27A0002862D /* CalculatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorError.swift; sourceTree = "<group>"; };
 		28613C79258CB2EA0002862D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		28613C8E258CC4480002862D /* CalculatorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLabel.swift; sourceTree = "<group>"; };
 		366A9A78257E9EDA0092A21E /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		366A9A7D257F63EF0092A21E /* BasicCalculable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCalculable.swift; sourceTree = "<group>"; };
 		366A9A80257F644D0092A21E /* DecimalCalculable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalCalculable.swift; sourceTree = "<group>"; };
@@ -128,14 +130,6 @@
 			path = DataStructure;
 			sourceTree = "<group>";
 		};
-		28613C64258C9A290002862D /* Button */ = {
-			isa = PBXGroup;
-			children = (
-				28613C65258C9A340002862D /* CircularButton.swift */,
-			);
-			path = Button;
-			sourceTree = "<group>";
-		};
 		28613C6B258C9D2E0002862D /* Mode */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +144,15 @@
 				28613C71258CA27A0002862D /* CalculatorError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		28613C87258CC4240002862D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				28613C65258C9A340002862D /* CircularButton.swift */,
+				28613C8E258CC4480002862D /* CalculatorLabel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		C713D9352570E5EB001C3AFC = {
@@ -173,9 +176,9 @@
 		C713D9402570E5EB001C3AFC /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				28613C87258CC4240002862D /* UI */,
 				28613C70258CA2700002862D /* Error */,
 				28613C6B258C9D2E0002862D /* Mode */,
-				28613C64258C9A290002862D /* Button */,
 				28613C5B258C84590002862D /* DataStructure */,
 				28613C56258C84430002862D /* Calculators */,
 				28613C55258C84330002862D /* Protocols */,
@@ -309,6 +312,7 @@
 				36DB44EB25826F0B0038C1B9 /* DoubleExtension.swift in Sources */,
 				C713D9442570E5EB001C3AFC /* SceneDelegate.swift in Sources */,
 				366A9A7E257F63EF0092A21E /* BasicCalculable.swift in Sources */,
+				28613C8F258CC4480002862D /* CalculatorLabel.swift in Sources */,
 				28613C66258C9A340002862D /* CircularButton.swift in Sources */,
 				36DB44E22581DE2F0038C1B9 /* BinaryCalculator.swift in Sources */,
 				366A9A84257F64B40092A21E /* DecimalCalculator.swift in Sources */,

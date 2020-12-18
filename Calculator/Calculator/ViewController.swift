@@ -39,14 +39,16 @@ class ViewController: UIViewController {
         }
     }
     
-    private(set) var minusTextLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
+    // MARK: - UI property
+    private(set) var minusTextLabel: CalculatorLabel = {
+        let label = CalculatorLabel()
         label.text = "-"
-        label.textAlignment = .right
-        label.font = label.font.withSize(55.0)
-        label.textColor = UIColor.white
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+    private(set) var zeroTextLabel: CalculatorLabel = {
+        let label = CalculatorLabel()
+        label.text = "0"
         return label
     }()
     
