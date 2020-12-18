@@ -113,10 +113,11 @@ class ViewController: UIViewController {
             self.showError(error, handler: nil)
         }
     }
-    private func addNumberLabel() {
-        
+    private func addNumberLabel(_ number: Int) {
+        let numberLabel = CalculatorLabel()
+        numberLabel.text = String(number)
+        self.resultStack.addArrangedSubview(numberLabel)
     }
-    
     
     // MARK: - Basic Operator Button
     @IBAction func tapClearButton(_ sender: Any) {
