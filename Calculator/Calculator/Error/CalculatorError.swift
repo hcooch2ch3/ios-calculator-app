@@ -25,7 +25,7 @@ extension CalculatorError: LocalizedError {
         case .inputNumberError:
             return "잘못된 수가 입력되었습니다.\n다시 입력해 주세요."
         case .getCalculator:
-            return ""
+            return "계산기에 문제가 있습니다.\n잠시 후 다시 시도해 주세요."
         case .unknown:
             return "알 수 없는 오류가 발생했습니다.\n잠시 후 다시 시도해 주세요."
         }

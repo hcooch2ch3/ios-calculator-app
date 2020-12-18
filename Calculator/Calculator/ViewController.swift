@@ -57,7 +57,6 @@ class ViewController: UIViewController {
     @IBAction func tapClearButton(_ sender: Any) {
         guard let calculator = calculators[self.calculatorMode] else {
             return self.showError(CalculatorError.getCalculator, handler: nil)
-            
         }
         calculator.clear()
     }

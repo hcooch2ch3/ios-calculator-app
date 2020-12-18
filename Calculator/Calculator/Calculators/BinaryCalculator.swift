@@ -336,6 +336,7 @@ class BinaryCalculator: BasicCalculable, BinaryCalculable {
         operatorStack.removeAll()
         operandStack.removeAll()
         self.operandBuffer = "0"
+        debugPrint("2️⃣: clear")
     }
     
 }
