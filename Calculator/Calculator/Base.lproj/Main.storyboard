@@ -15,25 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-uY-1WJ">
-                                <rect key="frame" x="0.0" y="311" width="414" height="66"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-hQ-lOX">
                                 <rect key="frame" x="30" y="311" width="354" height="521"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-Z2-4d5">
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
-                                        <subviews>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dfz-EA-oAx">
                                         <rect key="frame" x="0.0" y="76" width="354" height="81"/>
                                         <subviews>
@@ -237,7 +228,7 @@
                                                     <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpt-Vo-ZlS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-W2-xhn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-W2-xhn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -270,7 +261,7 @@
                                                     <action selector="tapBinaryNandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFU-GD-yQC"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-Yr-CnL" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-Yr-CnL" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="187" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -395,7 +386,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="tapDecimalDotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifX-ee-ovy"/>
+                                                    <action selector="tapDecimalDotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Az-vo-vcU"/>
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ln-Qj-enc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
@@ -444,17 +435,12 @@
                         <constraints>
                             <constraint firstItem="DaC-hQ-lOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="09N-BR-Poy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DaC-hQ-lOX" secondAttribute="trailing" constant="30" id="Ak1-GH-FjK"/>
-                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="bottom" secondItem="1eA-Z2-4d5" secondAttribute="bottom" id="EeZ-aJ-dcz"/>
                             <constraint firstItem="DaC-hQ-lOX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XfO-ER-BFe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jy6-uY-1WJ" secondAttribute="trailing" id="aax-4T-NgZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-hQ-lOX" secondAttribute="bottom" constant="30" id="bbh-Dc-cfG"/>
-                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="top" secondItem="1eA-Z2-4d5" secondAttribute="top" id="hQI-OD-j0x"/>
-                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="olq-eJ-0SW"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultStack" destination="1eA-Z2-4d5" id="RHz-0Y-IRx"/>
-                        <outlet property="swipeView" destination="jy6-uY-1WJ" id="zeV-wZ-DQh"/>
+                        <outlet property="numberLabel" destination="cM9-YD-Qgf" id="9tl-q5-1fy"/>
                         <outletCollection property="decimalButtons" destination="0qu-LR-kKb" collectionClass="NSMutableArray" id="ZWx-7G-oiX"/>
                         <outletCollection property="decimalButtons" destination="6xl-ds-Do6" collectionClass="NSMutableArray" id="Wm8-UB-NfT"/>
                         <outletCollection property="decimalButtons" destination="Xg0-Ai-CCp" collectionClass="NSMutableArray" id="ctq-Pr-Q9o"/>
@@ -475,7 +461,6 @@
                         <outletCollection property="binaryButtons" destination="reo-io-csh" collectionClass="NSMutableArray" id="e5c-pk-yxs"/>
                         <outletCollection property="binaryButtons" destination="R9u-WN-Cb9" collectionClass="NSMutableArray" id="CIc-Bt-Fqb"/>
                         <outletCollection property="binaryButtons" destination="BRN-5Q-LXn" collectionClass="NSMutableArray" id="2Fe-CQ-cgq"/>
-                        <outletCollection property="binaryButtons" destination="phc-Yr-CnL" collectionClass="NSMutableArray" id="aQA-16-qUi"/>
                         <outletCollection property="binaryButtons" destination="YsN-7e-FIT" collectionClass="NSMutableArray" id="ero-D1-7wZ"/>
                         <outletCollection property="binaryButtons" destination="2ln-Qj-enc" collectionClass="NSMutableArray" id="E2c-MY-H82"/>
                     </connections>

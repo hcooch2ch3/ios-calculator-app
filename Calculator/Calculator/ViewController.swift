@@ -71,6 +71,9 @@ class ViewController: UIViewController {
     }
     private func trimmingNumberText(_ text: String) -> String {
         var trimText = text
+        if trimText.hasPrefix("0.") {
+            return trimText
+        }
         if trimText.hasPrefix(zeroString) {
             trimText.remove(at: trimText.startIndex)
         }
@@ -150,10 +153,40 @@ class ViewController: UIViewController {
     
     // MARK: - decimal Calculator Button
     @IBAction func tapDecimalDivideButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] as? DecimalCalculator else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.divide()
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     @IBAction func tapDecimalMultiplyButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] as? DecimalCalculator else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.multiply()
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     @IBAction func tapDecimalDotButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] as? DecimalCalculator else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.enterNumber(dotSign)
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     @IBAction func tapDecimalNumberButton(_ sender: UIButton)  {
         guard let calculator = calculators[self.calculatorMode] else {

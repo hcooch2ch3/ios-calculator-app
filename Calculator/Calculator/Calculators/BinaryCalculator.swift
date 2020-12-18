@@ -8,6 +8,7 @@
 import Foundation
 
 class BinaryCalculator: BasicCalculable, BinaryCalculable {
+    
     struct OperatorDetail {
         let symbol: String
         let priority: Int
@@ -45,9 +46,9 @@ class BinaryCalculator: BasicCalculable, BinaryCalculable {
     /// - Throws:
     ///     - 0 또는 1 이외의 값이 입력되면 'CalculatorError.inputNumberError'.
     /// - Returns: 현재 버퍼에 저장되어있는 문자열.
-    func enterNumber(_ number: Character) throws -> String {
+    func enterNumber(_ number: String) throws -> String {
         // 새로 입력된 값을 추가한 피연산자를 Int로 변환하여 유효여부를 확인하고, 유효하면 버퍼에 초기화
-        let newOperand = operandBuffer + String(number)
+        let newOperand = operandBuffer + number
         guard let validOperand = Int(newOperand, radix: 2) else {
             throw CalculatorError.inputNumberError
         }
@@ -56,6 +57,10 @@ class BinaryCalculator: BasicCalculable, BinaryCalculable {
         isPushingOperatorJustBefore = false
         
         return operandBuffer
+    }
+    
+    func deleteNumber() -> String {
+        return ""
     }
     
     /// 사용자가 연산자를 입력하면, 버퍼에 저장되어있는 숫자들을 피연산자로서 스택에 푸쉬하기 위한 함수.

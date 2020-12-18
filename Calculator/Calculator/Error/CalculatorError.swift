@@ -23,7 +23,7 @@ extension CalculatorError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .divisionByZero:
-            return "0으로 나눌 수 없습니다.\n다른 수로 나눠 주세요."
+            return "0으로 나눌 수 없습니다.\n계산기를 초기화합니다."
         case .operandError:
             return "피연산자가 부족해 계산을 계속할 수 없습니다."
         case .inputNumberError:
