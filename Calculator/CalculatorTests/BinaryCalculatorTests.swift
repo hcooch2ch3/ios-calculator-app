@@ -9,11 +9,11 @@ import XCTest
 @testable import Calculator
 
 final class BinaryCalculatorTests: XCTestCase {
-    private var sut: BianryCalculator!
+    private var sut: BinaryCalculator!
     
     override func setUp() {
         super.setUp()
-        sut = BianryCalculator()
+        sut = BinaryCalculator()
     }
 
     override func tearDown() {
