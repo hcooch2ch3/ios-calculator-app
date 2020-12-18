@@ -42,11 +42,17 @@ class DecimalCalculator: BasicCalculable, DecimalCalculable {
     /// - Throws:
     ///     - 0~9 또는 소수점 이외의 값이 입력되면 'CalculatorError.inputNumberError'.
     /// - Returns: 현재 버퍼에 저장되어있는 문자열.
-    func enterNumber(_ number: Character) throws -> String {
+    func enterNumber(_ number: String) throws -> String {
         // 새로 입력된 값을 추가한 피연산자를 기존 버퍼의 값과 더해서 저장
-        operandBuffer = operandBuffer + String(number)
+        operandBuffer = operandBuffer + number
         
         isPushingOperatorJustBefore = false
+        
+        return operandBuffer
+    }
+    
+    func deleteNumber() -> String {
+        operandBuffer.remove(at: operandBuffer.endIndex)
         
         return operandBuffer
     }
@@ -229,12 +235,6 @@ class DecimalCalculator: BasicCalculable, DecimalCalculable {
         }
         
         return lastOperand.toString
-    }
-     
-    func removeNumber() throws {
-        guard let operand = operandStack.pop() else {
-            throw CalculatorError.deleteNumber
-        }
     }
     
     func clear() {
