@@ -15,14 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jy6-uY-1WJ">
+                                <rect key="frame" x="0.0" y="311" width="414" height="66"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-hQ-lOX">
                                 <rect key="frame" x="30" y="311" width="354" height="521"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-Z2-4d5">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -439,12 +444,17 @@
                         <constraints>
                             <constraint firstItem="DaC-hQ-lOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="09N-BR-Poy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DaC-hQ-lOX" secondAttribute="trailing" constant="30" id="Ak1-GH-FjK"/>
+                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="bottom" secondItem="1eA-Z2-4d5" secondAttribute="bottom" id="EeZ-aJ-dcz"/>
                             <constraint firstItem="DaC-hQ-lOX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XfO-ER-BFe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jy6-uY-1WJ" secondAttribute="trailing" id="aax-4T-NgZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-hQ-lOX" secondAttribute="bottom" constant="30" id="bbh-Dc-cfG"/>
+                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="top" secondItem="1eA-Z2-4d5" secondAttribute="top" id="hQI-OD-j0x"/>
+                            <constraint firstItem="jy6-uY-1WJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="olq-eJ-0SW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="resultStack" destination="1eA-Z2-4d5" id="RHz-0Y-IRx"/>
+                        <outlet property="swipeView" destination="jy6-uY-1WJ" id="zeV-wZ-DQh"/>
                         <outletCollection property="decimalButtons" destination="0qu-LR-kKb" collectionClass="NSMutableArray" id="ZWx-7G-oiX"/>
                         <outletCollection property="decimalButtons" destination="6xl-ds-Do6" collectionClass="NSMutableArray" id="Wm8-UB-NfT"/>
                         <outletCollection property="decimalButtons" destination="Xg0-Ai-CCp" collectionClass="NSMutableArray" id="ctq-Pr-Q9o"/>

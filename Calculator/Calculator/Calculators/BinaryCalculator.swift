@@ -332,6 +332,12 @@ class BinaryCalculator: BasicCalculable, BinaryCalculable {
         return String(lastOperand, radix: 2)
     }
     
+    func removeNumber() throws {
+        guard let operand = operandStack.pop() else {
+            throw CalculatorError.deleteNumber
+        }
+    }
+    
     func clear() {
         operatorStack.removeAll()
         operandStack.removeAll()

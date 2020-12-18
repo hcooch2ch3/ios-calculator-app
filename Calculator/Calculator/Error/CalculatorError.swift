@@ -13,6 +13,7 @@ enum CalculatorError: Error {
     case inputNumberError
     case getCalculator
     case getText
+    case deleteNumber
     case unknown
 }
 
@@ -29,6 +30,8 @@ extension CalculatorError: LocalizedError {
             return "계산기에 문제가 있습니다.\n잠시 후 다시 시도해 주세요."
         case .getText:
             return "숫자를 가져오는 중 문제가 생겼습니다.\n잠시 후 다시 시도해 주세요."
+        case .deleteNumber:
+            return "지울 수 있는 숫자가 없습니다."
         case .unknown:
             return "알 수 없는 오류가 발생했습니다.\n잠시 후 다시 시도해 주세요."
         }

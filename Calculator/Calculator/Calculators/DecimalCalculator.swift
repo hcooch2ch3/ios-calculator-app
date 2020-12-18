@@ -230,6 +230,12 @@ class DecimalCalculator: BasicCalculable, DecimalCalculable {
         
         return lastOperand.toString
     }
+     
+    func removeNumber() throws {
+        guard let operand = operandStack.pop() else {
+            throw CalculatorError.deleteNumber
+        }
+    }
     
     func clear() {
         operatorStack.removeAll()

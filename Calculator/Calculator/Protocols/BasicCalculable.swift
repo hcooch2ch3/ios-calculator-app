@@ -10,5 +10,6 @@ import Foundation
 protocol BasicCalculable {
     func add() throws -> String
     func subtract() throws -> String
-    func clear() 
+    func removeNumber() throws
+    func clear()
 }

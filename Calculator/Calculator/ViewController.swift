@@ -9,6 +9,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var resultStack: UIStackView!
+    @IBOutlet weak var swipeView: UIView!
     @IBOutlet var decimalButtons: [CircularButton]!
     @IBOutlet var binaryButtons: [CircularButton]!
     
@@ -52,7 +53,23 @@ class ViewController: UIViewController {
         return label
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpSwipeNumberView()
+    }
+    
     // MARK: - Set Up UI
+    private func setUpSwipeNumberView() {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeNumberView(_:)))
+        swipeGesture.direction = .left
+        self.swipeView.addGestureRecognizer(swipeGesture)
+    }
+    @objc func swipeNumberView(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .left {
+            self.deleteNumberLabel()
+        }
+    }
+    
     private func setUpDecimalUI() {
         for button in binaryButtons {
             button.isHidden = true
@@ -69,6 +86,7 @@ class ViewController: UIViewController {
             button.isHidden = false
         }
     }
+    
     private func deleteMinusNumberSign() {
         guard let firstTextLabel = self.resultStack.arrangedSubviews.first as? UILabel,
               let firstText = firstTextLabel.text else {
@@ -81,6 +99,24 @@ class ViewController: UIViewController {
     private func addMinusNumberSign() {
         self.resultStack.insertArrangedSubview(minusTextLabel, at: 0)
     }
+    private func deleteNumberLabel() {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            try calculator.removeNumber()
+            guard let lastNumberLabel = self.resultStack.arrangedSubviews.last as? UILabel else {
+                return self.showError(CalculatorError.getText, handler: nil)
+            }
+            lastNumberLabel.removeFromSuperview()
+        } catch {
+            self.showError(error, handler: nil)
+        }
+    }
+    private func addNumberLabel() {
+        
+    }
+    
     
     // MARK: - Basic Operator Button
     @IBAction func tapClearButton(_ sender: Any) {
