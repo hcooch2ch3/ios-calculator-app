@@ -434,6 +434,7 @@
                         <constraints>
                             <constraint firstItem="DaC-hQ-lOX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="09N-BR-Poy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DaC-hQ-lOX" secondAttribute="trailing" constant="30" id="Ak1-GH-FjK"/>
+                            <constraint firstItem="DaC-hQ-lOX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="XfO-ER-BFe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-hQ-lOX" secondAttribute="bottom" constant="30" id="bbh-Dc-cfG"/>
                         </constraints>
                     </view>
