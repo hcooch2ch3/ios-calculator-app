@@ -8,6 +8,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet var decimalButtons: [CircularButton]!
     @IBOutlet var binaryButtons: [CircularButton]!
     

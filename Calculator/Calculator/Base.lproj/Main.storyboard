@@ -438,6 +438,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="resultLabel" destination="cM9-YD-Qgf" id="Ze2-J4-p0e"/>
                         <outletCollection property="decimalButtons" destination="0qu-LR-kKb" collectionClass="NSMutableArray" id="ZWx-7G-oiX"/>
                         <outletCollection property="decimalButtons" destination="6xl-ds-Do6" collectionClass="NSMutableArray" id="Wm8-UB-NfT"/>
                         <outletCollection property="decimalButtons" destination="Xg0-Ai-CCp" collectionClass="NSMutableArray" id="ctq-Pr-Q9o"/>
