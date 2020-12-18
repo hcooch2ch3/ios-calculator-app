@@ -18,12 +18,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DaC-hQ-lOX">
                                 <rect key="frame" x="30" y="311" width="354" height="521"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="lastBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="1eA-Z2-4d5">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM9-YD-Qgf">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dfz-EA-oAx">
                                         <rect key="frame" x="0.0" y="76" width="354" height="81"/>
                                         <subviews>
@@ -439,7 +444,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultLabel" destination="cM9-YD-Qgf" id="Ze2-J4-p0e"/>
+                        <outlet property="resultStack" destination="1eA-Z2-4d5" id="RHz-0Y-IRx"/>
                         <outletCollection property="decimalButtons" destination="0qu-LR-kKb" collectionClass="NSMutableArray" id="ZWx-7G-oiX"/>
                         <outletCollection property="decimalButtons" destination="6xl-ds-Do6" collectionClass="NSMutableArray" id="Wm8-UB-NfT"/>
                         <outletCollection property="decimalButtons" destination="Xg0-Ai-CCp" collectionClass="NSMutableArray" id="ctq-Pr-Q9o"/>
