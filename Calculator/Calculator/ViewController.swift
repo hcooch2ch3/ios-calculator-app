@@ -16,9 +16,6 @@ class ViewController: UIViewController {
         .binary : BinaryCalculator()
     ]
     
-//    private var decimalCalculator = DecimalCalculator()
-//    private var binaryCalculator = BinaryCalculator()
-    
     private var calculatorMode: CalculatorMode = .decimal {
         didSet {
             if calculatorMode == .decimal {
@@ -59,12 +56,6 @@ class ViewController: UIViewController {
             return self.showError(CalculatorError.getCalculator, handler: nil)
         }
         calculator.clear()
-    }
-    private func clearDecimalCalculator() {
-        
-    }
-    private func clearBinaryCalculator() {
-        
     }
     @IBAction func tapSignButton(_ sender: Any) {
     }
