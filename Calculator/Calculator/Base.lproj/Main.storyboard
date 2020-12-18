@@ -76,6 +76,9 @@
                                                 <state key="normal" title="÷">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalDivideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eot-J0-qpZ"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2k-KT-DZS" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="354" y="0.0" width="81" height="81"/>
@@ -84,6 +87,9 @@
                                                 <state key="normal" title="&lt;&lt;">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryLeftShiftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUP-x0-cFo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -94,29 +100,38 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-vH-VWQ">
                                         <rect key="frame" x="0.0" y="167" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-Ai-CCp" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-Ai-CCp" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhO-V6-rWp"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-3J-96U" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-3J-96U" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="91" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qh2-qg-F05"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-O9-bq8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-O9-bq8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lbd-OY-U01"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-9x-Vbu" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="81" height="81"/>
@@ -125,6 +140,9 @@
                                                 <state key="normal" title="OR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryOrButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="924-O3-0gw"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cj1-X3-cql" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="81" height="81"/>
@@ -133,6 +151,9 @@
                                                 <state key="normal" title="NOR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryNorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LZA-0Q-VxZ"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reo-io-csh" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="81" height="81"/>
@@ -141,6 +162,9 @@
                                                 <state key="normal" title="NOT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryNotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ff8-Q7-ZFS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-ds-Do6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="273" y="0.0" width="81" height="81"/>
@@ -152,6 +176,9 @@
                                                 <state key="normal" title="x">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalMultiplyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pm-oC-nkR"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-Wq-bN9" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="354" y="0.0" width="81" height="81"/>
@@ -160,6 +187,9 @@
                                                 <state key="normal" title="&gt;&gt;">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalRightShiftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EaI-oD-JzX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -175,21 +205,27 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-N3-Jtq">
                                         <rect key="frame" x="0.0" y="258" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-86-u5J" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-86-u5J" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kV-DH-vQ6"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-pj-jXc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-pj-jXc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="91" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpt-Vo-ZlS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-W2-xhn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
@@ -198,6 +234,9 @@
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udq-VA-nEo"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9u-WN-Cb9" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="81" height="81"/>
@@ -206,6 +245,9 @@
                                                 <state key="normal" title="AND">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryAndButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8S3-69-IHu"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-5Q-LXn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="81" height="81"/>
@@ -214,14 +256,20 @@
                                                 <state key="normal" title="NAND">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryNandButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFU-GD-yQC"/>
+                                                </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-Yr-CnL" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-Yr-CnL" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="187" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="XOR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryXorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVl-xh-z3g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7x-vA-klz" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="273" y="0.0" width="81" height="81"/>
@@ -250,37 +298,49 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="65L-MI-i1t">
                                         <rect key="frame" x="0.0" y="349" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-ek-XZ7" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-ek-XZ7" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnq-ul-t0O"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-S8-ef8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-S8-ef8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="91" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eo4-Ko-nni"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-rP-eMN" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-rP-eMN" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTQ-vF-Vmr"/>
+                                                </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsN-7e-FIT" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsN-7e-FIT" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="0.0" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wof-lT-5d4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq1-CT-AbM" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="273" y="0.0" width="81" height="81"/>
@@ -313,6 +373,9 @@
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTi-xK-5XC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-xB-Us6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
@@ -321,6 +384,9 @@
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapDecimalDotButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifX-ee-ovy"/>
+                                                </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ln-Qj-enc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="268" y="0.0" width="0.0" height="81"/>
@@ -329,6 +395,9 @@
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapBinaryNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiR-H6-h4T"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etq-Rv-pAf" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="273" y="0.0" width="81" height="81"/>

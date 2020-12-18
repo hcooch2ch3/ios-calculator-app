@@ -235,6 +235,7 @@ class DecimalCalculator: BasicCalculable, DecimalCalculable {
         operatorStack.removeAll()
         operandStack.removeAll()
         self.operandBuffer = "0"
+        debugPrint("🔟: clear")
     }
     
 }
