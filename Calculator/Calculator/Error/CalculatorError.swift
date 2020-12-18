@@ -14,6 +14,8 @@ enum CalculatorError: Error {
     case getCalculator
     case getText
     case deleteNumber
+    case deleteMinus
+    case overflowDigit
     case unknown
 }
 
@@ -32,6 +34,10 @@ extension CalculatorError: LocalizedError {
             return "숫자를 가져오는 중 문제가 생겼습니다.\n잠시 후 다시 시도해 주세요."
         case .deleteNumber:
             return "지울 수 있는 숫자가 없습니다."
+        case .deleteMinus:
+            return "음수에서 양수로 전환할 수 없습니다.\n잠시 후 다시 시도해 주세요."
+        case .overflowDigit:
+            return "9자리 초과해서 입력할 수 없습니다."
         case .unknown:
             return "알 수 없는 오류가 발생했습니다.\n잠시 후 다시 시도해 주세요."
         }
