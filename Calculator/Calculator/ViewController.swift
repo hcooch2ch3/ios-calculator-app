@@ -8,7 +8,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var resultStack: UIStackView!
     @IBOutlet var decimalButtons: [CircularButton]!
     @IBOutlet var binaryButtons: [CircularButton]!
     
@@ -28,6 +28,28 @@ class ViewController: UIViewController {
         }
     }
     
+    private var isPositiveNumber: Bool = true {
+        didSet {
+            if isPositiveNumber {
+                deleteMinusNumberSign()
+            }
+            else {
+                addMinusNumberSign()
+            }
+        }
+    }
+    
+    private(set) var minusTextLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "-"
+        label.textAlignment = .right
+        label.font = label.font.withSize(55.0)
+        label.textColor = UIColor.white
+        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        return label
+    }()
+    
     // MARK: - Set Up UI
     private func setUpDecimalUI() {
         for button in binaryButtons {
@@ -45,6 +67,18 @@ class ViewController: UIViewController {
             button.isHidden = false
         }
     }
+    private func deleteMinusNumberSign() {
+        guard let firstTextLabel = self.resultStack.arrangedSubviews.first as? UILabel,
+              let firstText = firstTextLabel.text else {
+            return self.showError(CalculatorError.getText, handler: nil)
+        }
+        if firstText.contains("-") {
+            firstTextLabel.removeFromSuperview()
+        }
+    }
+    private func addMinusNumberSign() {
+        self.resultStack.insertArrangedSubview(minusTextLabel, at: 0)
+    }
     
     // MARK: - Basic Operator Button
     @IBAction func tapClearButton(_ sender: Any) {
@@ -54,6 +88,7 @@ class ViewController: UIViewController {
         calculator.clear()
     }
     @IBAction func tapSignButton(_ sender: Any) {
+        self.isPositiveNumber = !self.isPositiveNumber
     }
     @IBAction func tapModeChangeButton(_ sender: Any) {
         self.calculatorMode = self.calculatorMode.changeMode()
