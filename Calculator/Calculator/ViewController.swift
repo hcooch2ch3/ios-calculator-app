@@ -8,10 +8,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var resultStack: UIStackView!
-    @IBOutlet weak var swipeView: UIView!
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet var decimalButtons: [CircularButton]!
     @IBOutlet var binaryButtons: [CircularButton]!
+    
+    private let minusSign = "-"
+    private let zeroString = "0"
+    private let dotSign = "."
+    private let digitNumber = 9
     
     private var calculators: [CalculatorMode : BasicCalculable] = [
         .decimal : DecimalCalculator(),
@@ -32,26 +36,13 @@ class ViewController: UIViewController {
     private var isPositiveNumber: Bool = true {
         didSet {
             if isPositiveNumber {
-                deleteMinusNumberSign()
+//                deleteMinusNumberSign()
             }
             else {
-                addMinusNumberSign()
+//                addMinusNumberSign()
             }
         }
     }
-    
-    // MARK: - UI property
-    private(set) var minusTextLabel: CalculatorLabel = {
-        let label = CalculatorLabel()
-        label.text = "-"
-        label.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        return label
-    }()
-    private(set) var zeroTextLabel: CalculatorLabel = {
-        let label = CalculatorLabel()
-        label.text = "0"
-        return label
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +53,31 @@ class ViewController: UIViewController {
     private func setUpSwipeNumberView() {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeNumberView(_:)))
         swipeGesture.direction = .left
-        self.swipeView.addGestureRecognizer(swipeGesture)
+        self.numberLabel.addGestureRecognizer(swipeGesture)
     }
     @objc func swipeNumberView(_ sender: UISwipeGestureRecognizer) {
         if sender.direction == .left {
-            self.deleteNumberLabel()
+            self.deleteNumber()
         }
+    }
+    
+    private func deleteNumber() {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        var numberText = calculator.deleteNumber()
+        numberText = trimmingNumberText(numberText)
+        setNumberLabelText(numberText)
+    }
+    private func trimmingNumberText(_ text: String) -> String {
+        var trimText = text
+        if trimText.hasPrefix(zeroString) {
+            trimText.remove(at: trimText.startIndex)
+        }
+        return trimText
+    }
+    private func setNumberLabelText(_ text: String) {
+        numberLabel.text = text
     }
     
     private func setUpDecimalUI() {
@@ -87,44 +97,13 @@ class ViewController: UIViewController {
         }
     }
     
-    private func deleteMinusNumberSign() {
-        guard let firstTextLabel = self.resultStack.arrangedSubviews.first as? UILabel,
-              let firstText = firstTextLabel.text else {
-            return self.showError(CalculatorError.getText, handler: nil)
-        }
-        if firstText.contains("-") {
-            firstTextLabel.removeFromSuperview()
-        }
-    }
-    private func addMinusNumberSign() {
-        self.resultStack.insertArrangedSubview(minusTextLabel, at: 0)
-    }
-    private func deleteNumberLabel() {
-        guard let calculator = calculators[self.calculatorMode] else {
-            return self.showError(CalculatorError.getCalculator, handler: nil)
-        }
-        do {
-            try calculator.removeNumber()
-            guard let lastNumberLabel = self.resultStack.arrangedSubviews.last as? UILabel else {
-                return self.showError(CalculatorError.getText, handler: nil)
-            }
-            lastNumberLabel.removeFromSuperview()
-        } catch {
-            self.showError(error, handler: nil)
-        }
-    }
-    private func addNumberLabel(_ number: Int) {
-        let numberLabel = CalculatorLabel()
-        numberLabel.text = String(number)
-        self.resultStack.addArrangedSubview(numberLabel)
-    }
-    
     // MARK: - Basic Operator Button
     @IBAction func tapClearButton(_ sender: Any) {
         guard let calculator = calculators[self.calculatorMode] else {
             return self.showError(CalculatorError.getCalculator, handler: nil)
         }
         calculator.clear()
+        setNumberLabelText(zeroString)
     }
     @IBAction func tapSignButton(_ sender: Any) {
         self.isPositiveNumber = !self.isPositiveNumber
@@ -133,10 +112,40 @@ class ViewController: UIViewController {
         self.calculatorMode = self.calculatorMode.changeMode()
     }
     @IBAction func tapSubtractButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.subtract()
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     @IBAction func tapAddButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.add()
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     @IBAction func tapEqualButton(_ sender: Any) {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            var numberText = try calculator.equal()
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     
     // MARK: - decimal Calculator Button
@@ -146,8 +155,34 @@ class ViewController: UIViewController {
     }
     @IBAction func tapDecimalDotButton(_ sender: Any) {
     }
-    @IBAction func tapDecimalNumberButton(_ sender: Any) {
+    @IBAction func tapDecimalNumberButton(_ sender: UIButton)  {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            guard try canInputNumber() else {
+                return self.showError(CalculatorError.overflowDigit, handler: nil)
+            }
+            var numberText = try calculator.enterNumber(String(sender.tag))
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
+    }
+    private func canInputNumber() throws -> Bool {
+        guard let numberText = numberLabel.text else {
+            throw CalculatorError.getText
+        }
+        var digit = digitNumber
+        if numberText.contains(dotSign) {
+            digit += 1
+        }
+        if numberText.contains(minusSign) {
+            digit += 1
+        }
         
+        return numberText.count < digit
     }
     
     // MARK: - binary Calculator Button
@@ -167,8 +202,20 @@ class ViewController: UIViewController {
     }
     @IBAction func tapBinaryXorButton(_ sender: Any) {
     }
-    @IBAction func tapBinaryNumberButton(_ sender: Any) {
-        
+    @IBAction func tapBinaryNumberButton(_ sender: UIButton) {
+        guard let calculator = calculators[self.calculatorMode] else {
+            return self.showError(CalculatorError.getCalculator, handler: nil)
+        }
+        do {
+            guard try canInputNumber() else {
+                return self.showError(CalculatorError.overflowDigit, handler: nil)
+            }
+            var numberText = try calculator.enterNumber(String(sender.tag))
+            numberText = trimmingNumberText(numberText)
+            setNumberLabelText(numberText)
+        } catch {
+            self.showError(error, handler: nil)
+        }
     }
     
     // MARK: - alert func
