@@ -27,11 +27,6 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     // MARK: - Set Up UI
     private func setUpDecimalUI() {
         for button in binaryButtons {
