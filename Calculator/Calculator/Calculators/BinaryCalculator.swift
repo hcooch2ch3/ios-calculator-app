@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BianryCalculator: BasicCalculable, BinaryCalculable {
+class BinaryCalculator: BasicCalculable, BinaryCalculable {
     struct OperatorDetail {
         let symbol: String
         let priority: Int

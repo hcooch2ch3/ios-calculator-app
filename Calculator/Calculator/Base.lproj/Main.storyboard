@@ -33,10 +33,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="caa-VZ-N8u" secondAttribute="height" multiplier="1:1" id="gfB-vA-LLz"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="C">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsS-Vt-8V2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83S-l7-lBZ" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="91" y="0.0" width="81" height="81"/>
@@ -44,104 +47,179 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="83S-l7-lBZ" secondAttribute="height" multiplier="1:1" id="51V-x8-MLw"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="+/-">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapSignButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q57-jI-HJR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osA-gk-fMx" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="2/10">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapModeChangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqr-8B-VUb"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-LR-kKb" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-LR-kKb" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" red="0.84943825009999996" green="0.58262270689999995" blue="0.30188268419999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="0qu-LR-kKb" secondAttribute="height" multiplier="1:1" id="jWM-fW-7HC"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="÷">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2k-KT-DZS" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="273" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" red="0.84943825009999996" green="0.58262270689999995" blue="0.30188268419999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="&lt;&lt;">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="osA-gk-fMx" firstAttribute="width" secondItem="osA-gk-fMx" secondAttribute="height" multiplier="1:1" id="DB9-G3-IMn"/>
+                                            <constraint firstItem="N2k-KT-DZS" firstAttribute="width" secondItem="N2k-KT-DZS" secondAttribute="height" multiplier="1:1" id="T58-yJ-d1H"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-vH-VWQ">
                                         <rect key="frame" x="0.0" y="167" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-Ai-CCp" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-Ai-CCp" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-3J-96U" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0c-3J-96U" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-O9-bq8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ0-O9-bq8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="9">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-ds-Do6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="273" y="0.0" width="81" height="81"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDx-9x-Vbu" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="OR">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cj1-X3-cql" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="91" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="NOR">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reo-io-csh" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="182" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="NOT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6xl-ds-Do6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="268" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" red="0.84943825009999996" green="0.58262270689999995" blue="0.30188268419999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6xl-ds-Do6" secondAttribute="height" multiplier="1:1" id="Eqs-vb-jMi"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="x">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-Wq-bN9" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="273" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" red="0.84943825009999996" green="0.58262270689999995" blue="0.30188268419999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="&gt;&gt;">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="rDx-9x-Vbu" firstAttribute="width" secondItem="rDx-9x-Vbu" secondAttribute="height" multiplier="1:1" id="44I-cE-7ql"/>
                                             <constraint firstItem="KZ0-O9-bq8" firstAttribute="width" secondItem="KZ0-O9-bq8" secondAttribute="height" multiplier="1:1" id="46Z-o8-O94"/>
+                                            <constraint firstItem="Cj1-X3-cql" firstAttribute="width" secondItem="Cj1-X3-cql" secondAttribute="height" multiplier="1:1" id="DSe-1n-RmL"/>
                                             <constraint firstItem="F0c-3J-96U" firstAttribute="width" secondItem="F0c-3J-96U" secondAttribute="height" multiplier="1:1" id="cBb-El-hsy"/>
+                                            <constraint firstItem="xgX-Wq-bN9" firstAttribute="width" secondItem="xgX-Wq-bN9" secondAttribute="height" multiplier="1:1" id="fdf-eN-gMd"/>
+                                            <constraint firstItem="reo-io-csh" firstAttribute="width" secondItem="reo-io-csh" secondAttribute="height" multiplier="1:1" id="mUc-Gh-KR7"/>
                                             <constraint firstItem="Xg0-Ai-CCp" firstAttribute="width" secondItem="Xg0-Ai-CCp" secondAttribute="height" multiplier="1:1" id="tIO-rk-dzk"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sjd-N3-Jtq">
                                         <rect key="frame" x="0.0" y="258" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-86-u5J" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-86-u5J" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-pj-jXc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Is-pj-jXc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="5">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-W2-xhn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaY-W2-xhn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9u-WN-Cb9" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="AND">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRN-5Q-LXn" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="91" y="0.0" width="81" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="NAND">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-Yr-CnL" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="182" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                                <state key="normal" title="6">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="XOR">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -151,42 +229,56 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="G7x-vA-klz" secondAttribute="height" multiplier="1:1" id="4KO-gk-FbU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="-">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapSubtractButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4NS-is-rUa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="bpL-86-u5J" firstAttribute="width" secondItem="bpL-86-u5J" secondAttribute="height" multiplier="1:1" id="DEm-g1-deD"/>
+                                            <constraint firstItem="BRN-5Q-LXn" firstAttribute="width" secondItem="BRN-5Q-LXn" secondAttribute="height" multiplier="1:1" id="KBy-6B-mBa"/>
+                                            <constraint firstItem="R9u-WN-Cb9" firstAttribute="width" secondItem="R9u-WN-Cb9" secondAttribute="height" multiplier="1:1" id="OAU-1F-9hk"/>
                                             <constraint firstItem="WaY-W2-xhn" firstAttribute="width" secondItem="WaY-W2-xhn" secondAttribute="height" multiplier="1:1" id="gTc-41-anh"/>
+                                            <constraint firstItem="phc-Yr-CnL" firstAttribute="width" secondItem="phc-Yr-CnL" secondAttribute="height" multiplier="1:1" id="sKY-3A-qNK"/>
                                             <constraint firstItem="4Is-pj-jXc" firstAttribute="width" secondItem="4Is-pj-jXc" secondAttribute="height" multiplier="1:1" id="urZ-bx-3fs"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="65L-MI-i1t">
                                         <rect key="frame" x="0.0" y="349" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-ek-XZ7" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyC-ek-XZ7" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-S8-ef8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="91" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2a-S8-ef8" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-rP-eMN" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-rP-eMN" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsN-7e-FIT" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="1">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -196,10 +288,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="cq1-CT-AbM" secondAttribute="height" multiplier="1:1" id="CAs-xL-QFq"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="+">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAddButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cV7-hC-AY6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -211,19 +306,27 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Rs-Jo-hJh">
                                         <rect key="frame" x="0.0" y="440" width="354" height="81"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv4-BT-nMF" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="172" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv4-BT-nMF" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-xB-Us6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="182" y="0.0" width="81" height="81"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1k5-xB-Us6" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="-81" y="0.0" width="81" height="81"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title=".">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ln-Qj-enc" customClass="CircularButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="263" height="81"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <state key="normal" title="0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -233,10 +336,13 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Etq-Rv-pAf" secondAttribute="height" multiplier="1:1" id="vmF-vu-qUU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                 <state key="normal" title="=">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapEqualButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1g-iZ-BAN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -245,8 +351,12 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="2ln-Qj-enc" firstAttribute="leading" secondItem="YsN-7e-FIT" secondAttribute="leading" id="5Je-Ye-dAm"/>
+                                    <constraint firstItem="2ln-Qj-enc" firstAttribute="trailing" secondItem="YsN-7e-FIT" secondAttribute="trailing" id="Jcl-iv-OaK"/>
                                     <constraint firstItem="Kv4-BT-nMF" firstAttribute="trailing" secondItem="W2a-S8-ef8" secondAttribute="trailing" id="QJP-XE-HfA"/>
+                                    <constraint firstItem="YsN-7e-FIT" firstAttribute="trailing" secondItem="phc-Yr-CnL" secondAttribute="trailing" id="bNF-pS-RfZ"/>
                                     <constraint firstItem="Kv4-BT-nMF" firstAttribute="leading" secondItem="OyC-ek-XZ7" secondAttribute="leading" id="egc-iO-TCX"/>
+                                    <constraint firstItem="YsN-7e-FIT" firstAttribute="leading" secondItem="R9u-WN-Cb9" secondAttribute="leading" id="tHF-XC-FGE"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -258,6 +368,31 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaC-hQ-lOX" secondAttribute="bottom" constant="30" id="bbh-Dc-cfG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="decimalButtons" destination="0qu-LR-kKb" collectionClass="NSMutableArray" id="ZWx-7G-oiX"/>
+                        <outletCollection property="decimalButtons" destination="6xl-ds-Do6" collectionClass="NSMutableArray" id="Wm8-UB-NfT"/>
+                        <outletCollection property="decimalButtons" destination="Xg0-Ai-CCp" collectionClass="NSMutableArray" id="ctq-Pr-Q9o"/>
+                        <outletCollection property="decimalButtons" destination="F0c-3J-96U" collectionClass="NSMutableArray" id="Qzx-9i-kgl"/>
+                        <outletCollection property="decimalButtons" destination="KZ0-O9-bq8" collectionClass="NSMutableArray" id="K9J-D3-arx"/>
+                        <outletCollection property="decimalButtons" destination="bpL-86-u5J" collectionClass="NSMutableArray" id="Pxc-dp-gjg"/>
+                        <outletCollection property="decimalButtons" destination="4Is-pj-jXc" collectionClass="NSMutableArray" id="n1b-1E-gPV"/>
+                        <outletCollection property="decimalButtons" destination="WaY-W2-xhn" collectionClass="NSMutableArray" id="JJR-nw-Lcs"/>
+                        <outletCollection property="decimalButtons" destination="OyC-ek-XZ7" collectionClass="NSMutableArray" id="B0O-ak-P8U"/>
+                        <outletCollection property="decimalButtons" destination="W2a-S8-ef8" collectionClass="NSMutableArray" id="64w-GT-gWr"/>
+                        <outletCollection property="decimalButtons" destination="hqe-rP-eMN" collectionClass="NSMutableArray" id="UUM-vZ-Aea"/>
+                        <outletCollection property="decimalButtons" destination="Kv4-BT-nMF" collectionClass="NSMutableArray" id="03D-Pb-LmE"/>
+                        <outletCollection property="decimalButtons" destination="1k5-xB-Us6" collectionClass="NSMutableArray" id="GzZ-l1-ih7"/>
+                        <outletCollection property="binaryButtons" destination="N2k-KT-DZS" collectionClass="NSMutableArray" id="1cv-TG-ifR"/>
+                        <outletCollection property="binaryButtons" destination="xgX-Wq-bN9" collectionClass="NSMutableArray" id="3d0-es-dPK"/>
+                        <outletCollection property="binaryButtons" destination="rDx-9x-Vbu" collectionClass="NSMutableArray" id="rje-40-Ncn"/>
+                        <outletCollection property="binaryButtons" destination="Cj1-X3-cql" collectionClass="NSMutableArray" id="lub-sq-mX9"/>
+                        <outletCollection property="binaryButtons" destination="reo-io-csh" collectionClass="NSMutableArray" id="e5c-pk-yxs"/>
+                        <outletCollection property="binaryButtons" destination="R9u-WN-Cb9" collectionClass="NSMutableArray" id="CIc-Bt-Fqb"/>
+                        <outletCollection property="binaryButtons" destination="BRN-5Q-LXn" collectionClass="NSMutableArray" id="2Fe-CQ-cgq"/>
+                        <outletCollection property="binaryButtons" destination="phc-Yr-CnL" collectionClass="NSMutableArray" id="aQA-16-qUi"/>
+                        <outletCollection property="binaryButtons" destination="YsN-7e-FIT" collectionClass="NSMutableArray" id="ero-D1-7wZ"/>
+                        <outletCollection property="binaryButtons" destination="2ln-Qj-enc" collectionClass="NSMutableArray" id="E2c-MY-H82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

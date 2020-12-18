@@ -7,15 +7,6 @@
 
 import Foundation
 
-enum CalculatorError: Error {
-    case divisionByZero
-    case emptyStack
-    case operandError
-    case stackItemError
-    case inputNumberError
-    case asciiValueError
-}
-
 class DecimalCalculator: BasicCalculable, DecimalCalculable {
     struct OperatorDetail {
         let symbol: String
